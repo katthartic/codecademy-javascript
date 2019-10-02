@@ -17,7 +17,7 @@ Our code will break the game into four parts:
 
 //let userInput = 'bomb'
 
-import { question, close } from 'readline'
+import { question } from 'readline';
 
 const getUserChoice = userInput => {
   userChoice = userInput.toLowerCase()
@@ -73,6 +73,10 @@ const playGame = (userInput) => {
 }
 
 
-question('rock, paper, or scissors?', playGame(userInput)) {
-    close()
-}
+// question('rock, paper, or scissors?', playGame(userInput)) {
+//     close()
+// }
+
+question('What is your favorite food? ', (answer) => {
+    console.log(`Oh, so your favorite food is ${answer}`);
+  });
