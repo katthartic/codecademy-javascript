@@ -15,7 +15,9 @@ Our code will break the game into four parts:
     Start the program and display the results. */
 
 
-    let userInput = 'bomb'
+//let userInput = 'bomb'
+
+import { question, close } from 'readline'
 
 const getUserChoice = userInput => {
   userChoice = userInput.toLowerCase()
@@ -55,8 +57,7 @@ const determineWinner = (userChoice,compChoice) => {
   }
 }
 
-const playGame = () => {
-  //userInput = prompt('do you choose rock, paper, or scissors?', 'bomb')
+const playGame = (userInput) => {
   const compChoice = getComputerChoice()
   let userChoice = getUserChoice(userInput)
   //Bomb cheat!
@@ -71,4 +72,7 @@ const playGame = () => {
   console.log(determineWinner(userChoice,compChoice))
 }
 
-playGame()
+
+question('rock, paper, or scissors?', playGame(userInput)) {
+    close()
+}
